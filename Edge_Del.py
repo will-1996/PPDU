@@ -389,7 +389,7 @@ for eps in range(1, 9, 1):
 #
 #         del_ind_j = random.sample(sseq[nd[j]], noisy_degree_del[j])
 #         sseq[nd[j]] = list(set(sseq[nd[j]])-set(del_ind_j))
-#         for k in del_ind_j:             # 删除另一端的边信息 ？   或许不需要？？？？？
+#         for k in del_ind_j:             # 删除另一端的边信息
 #             if nd[j] in sseq[nd[j]]:
 #                 sseq[nd[j]].remove(nd[j])
 #
