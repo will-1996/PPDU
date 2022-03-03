@@ -204,8 +204,6 @@ def graphToSeq(graph):
 #         for j in seq[i]:
 #             j = int(j)
 #             edges.append([i, j])
-#     print('oh ho!')
-#     # --------内存不足了，考虑测试一下问题出在哪？ 边过多还是nx生成graph耗内存？
 #     G = nx.Graph()
 #     # 往图添加节点和边
 #     G.add_nodes_from(nodes)
@@ -226,7 +224,6 @@ def graphToSeq(graph):
 
 
 def nxGraphGen(nodes, seq):
-      # -------------尝试减少内存版本--------------------
     G = nx.Graph()
     # 往图添加节点和边
     G.add_nodes_from(nodes)
@@ -264,7 +261,7 @@ def CC(G):
     return total/Size
 
 
-def louvainClustering(G):        # 连续两次，结果不一样？  而且差别很大？？？？？？？？？？？？？？？？？
+def louvainClustering(G):        
     # G = nxGraphGen(nodes, seq)
     # cc = CC(G)
     partition = community_louvain.best_partition(G)
