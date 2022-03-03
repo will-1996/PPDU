@@ -368,7 +368,7 @@ def graphPartition(graph, num, k, degree):
             if count >= degree[i]//2:
                 break
 
-        a = np.round(k + np.random.laplace(0, 1)).astype(int)                   # ----------attention！！！ 这里的laplace参数简单的置为了1，是否需要改动？------------
+        a = np.round(k + np.random.laplace(0, 1)).astype(int)                   # ----------attention！！！ 这里的laplace参数简单的置为了1------------
         # ------------保证边改变数量a的区间在 0~3*k之间------------
         if a > 3*k:
             a = 3*k
@@ -404,7 +404,7 @@ Seq = get_seq('data/facebook_seq')
 Degree = np.loadtxt('data/facebook_degree', delimiter=',').astype(int)
 
 partGraph, luckNodes, swaps = graphPartition(graph=Graph, num=10, k=10, degree=Degree)
-# print(type(swaps))                                  # ------------长短不一，无法存储？？？？    to be continue----------------
+# print(type(swaps))                                  # ------------长短不一
 # np.savetxt('data/Part_graph', partGraph, delimiter=',')
 # np.savetxt('data/Luck_nodes', luckNodes, delimiter=',')
 # np.savetxt('data/Swaps', swaps, delimiter=',')
@@ -458,7 +458,7 @@ G = nxGraphGen(nodes, Seq)
 # lis_M = []
 #
 
-# -------------------------新增节点   delIndex, 直接在原始graph上操作就可以？----------------------------------
+# -------------------------新增节点   delIndex, 直接在原始graph上操作就可以---------------------------------
 delta = 1
 epsilon = 1
 
