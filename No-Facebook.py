@@ -194,24 +194,6 @@ def graphToSeq(graph):
     return seq
 
 
-# def nxGraphGen(nodes, seq):
-#     edges = []
-#     for i in range(Size):
-#         # edges.append([])
-#         # if type(seq[i]) != list:
-#         #     edges.append([i, seq[i]])
-#         #     continue
-#         for j in seq[i]:
-#             j = int(j)
-#             edges.append([i, j])
-#     print('oh ho!')
-#     # --------内存不足了，考虑测试一下问题出在哪？ 边过多还是nx生成graph耗内存？
-#     G = nx.Graph()
-#     # 往图添加节点和边
-#     G.add_nodes_from(nodes)
-#     G.add_edges_from(edges)
-#     return G
-
 
 # def nxGraphGen(nodes, seq):
 #     G = nx.Graph()
@@ -226,7 +208,6 @@ def graphToSeq(graph):
 
 
 # def nxGraphGen(nodes, seq):
-#       # -------------尝试减少内存版本--------------------
 #     G = nx.Graph()
 #     # 往图添加节点和边
 #     G.add_nodes_from(nodes)
